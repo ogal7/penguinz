@@ -1,9 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const app = express();
 const passport = require("passport");
 const users = require("./routes/api/users");
+const app = express();
+
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
@@ -13,12 +14,13 @@ app.use(
 app.use(bodyParser.json());
 // DB Config
 const db = require("./config/keys").mongoURI;
+//console.log(db);
 // Connect to MongoDB
 mongoose
   .connect(
     db,
     { useNewUrlParser: true,
-    	useUnifiedTopology: true,
+       useUnifiedTopology: true,
      }
   )
   .then(() => console.log("MongoDB successfully connected"))
