@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Copse&display=swap');
+
+.container {
+  font-family: 'Copse', serif;
+  font-size: 14pt;
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container{
+  width: 500px;
+  padding: 20px 40px 40px;
+  background-color: white;
+  color: #2e2e2e;
+  margin-top: 80px;
+}
+
+.login-header {
+	font-size: 40px;
+}
+
+.login-input {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.login-input p {
+	text-align: center;
+	margin: 10px;
+}
+
+.login-input input {
+  border: none;
+  height: 50px;
+  font-family: 'Copse', serif;
+  font-size: 14pt;
+  padding: 0 10px;
+  margin: 5px;
+  background-color: #F0F8FF;
+}
+
+button {
+  width: 500px;
+  height: 50px;
+  font-size: 14pt;
+  font-family: 'Copse', serif;
+  font-weight: bold;
+  background-color: #191970;
+  color: white;
+  margin: 20px 0px;
+}
