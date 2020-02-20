@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from "react-router-dom";
 import "../style/login.css";
 
 
@@ -14,7 +15,7 @@ class Login extends Component {
 	        				<input type="text" placeholder="Enter Email" name="email" required />
 	        				<input type="password" placeholder="Enter Password" name="pass" required />
 	        				<button id= "login-button" type="submit" value= "dashboard.html">Login</button>
-	        				<p> Don't have an account? <a href="signup.html">Sign up</a>. </p>
+	        				<p> Don't have an account? <Link to="/register">Register</Link>. </p>
 	        			</div>
 	        		</form>
 	            </div>
