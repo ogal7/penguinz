@@ -27,7 +27,7 @@ class Register extends Component {
 	    }
 	}
 
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 	    if (nextProps.errors) {
 	      this.setState({
 	        errors: nextProps.errors
@@ -36,17 +36,17 @@ class Register extends Component {
 	  }
 
 	onChange = e => {
-    this.setState({ [e.target.id]: e.target.value });
+    	this.setState({ [e.target.id]: e.target.value });
   	};
 
   	onSubmit = e => {
-    e.preventDefault();
-    	const newUser = {
-	      name: this.state.name,
-	      email: this.state.email,
-	      password: this.state.password,
-	      password2: this.state.password2
-	  };
+	    e.preventDefault();
+	    	const newUser = {
+		      name: this.state.name,
+		      email: this.state.email,
+		      password: this.state.password,
+		      password2: this.state.password2
+		  };
 
 	  this.props.registerUser(newUser, this.props.history); 
     };
