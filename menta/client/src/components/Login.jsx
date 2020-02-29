@@ -63,7 +63,7 @@ class Login extends Component {
 	        					className={classnames("", {
 				                    invalid: errors.email || errors.emailnotfound
 				                  })}
-	        					required />
+	        					/>
 	        				<span className="red-text">
 			                  {errors.email}
 			                  {errors.emailnotfound}
@@ -76,7 +76,7 @@ class Login extends Component {
 	        					className={classnames("", {
 				                    invalid: errors.password || errors.passwordincorrect
 				                  })}
-	        					required />
+	        					/>
 				        	<span className="red-text">
 			                  {errors.password}
 			                  {errors.passwordincorrect}
