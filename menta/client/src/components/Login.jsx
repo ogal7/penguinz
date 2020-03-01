@@ -40,7 +40,10 @@ class Login extends Component {
 		  }
 
 	onChange = e => {
-    	this.setState({ [e.target.id]: e.target.value });
+		//console.log(this);
+		console.log(e.target);
+    	this.setState({ [e.target.name]: e.target.value });
+    	console.log(this.state);
   	};
 
   	onSubmit = e => {
@@ -50,7 +53,7 @@ class Login extends Component {
       	email: this.state.email,
       	password: this.state.password
       };
-
+      //console.log(userData);
       this.props.loginUser(userData); // since we handle the redirect 
     };
 
@@ -79,7 +82,7 @@ class Login extends Component {
 	        					onChange= {this.onChange}
 	        					type="password" 
 	        					placeholder="Enter Password" 
-	        					name="pass" 
+	        					name="password" 
 	        					className={classnames("", {
 				                    invalid: errors.password || errors.passwordincorrect
 				                  })}
