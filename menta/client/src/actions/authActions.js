@@ -7,11 +7,14 @@ import {
   USER_LOADING
 } from "./types";
 // Register User
+
+ //.post("/api/users/register", userData)
+//.post("/routes/api/users/register", userData)
+//.post("https://cors-anywhere.herokuapp.com/http://localhost:5000/api/users/register", userData)
+/*.then(res => history.push("/login")) */
 export const registerUser = (userData, history) => dispatch => {
   axios
-    //.post("/api/users/register", userData)
     .post("http://localhost:5000/api/users/register", userData)
-    /*.then(res => history.push("/login")) */
     .then(res => history.push("/")) // re-direct to login on successful register
     .catch(err =>
       dispatch({
@@ -21,9 +24,12 @@ export const registerUser = (userData, history) => dispatch => {
     );
 };
 // Login - get user token
+
+//.post("/routes/api/users/login", userData)
+//.post("https://cors-anywhere.herokuapp.com/http://localhost:5000/api/users/login", userData)
+ //.post("/api/users/login", userData)
 export const loginUser = userData => dispatch => {
   axios
-    //.post("/api/users/login", userData)
     .post("http://localhost:5000/api/users/login", userData)
     .then(res => {
       // Save to localStorage

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import { Link } from "react-router-dom";
 import "../style/login.css";
 
@@ -27,7 +27,7 @@ class Login extends Component {
 	    }
 	}
 
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 	    if (nextProps.auth.isAuthenticated) {
 	      this.props.history.push("/dashboard"); // push user to dashboard when they login
 	    }
