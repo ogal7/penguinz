@@ -40,8 +40,6 @@ class Login extends Component {
 		  }
 
 	onChange = e => {
-		//console.log(this);
-		console.log(e.target);
     	this.setState({ [e.target.name]: e.target.value });
     	console.log(this.state);
   	};
@@ -53,7 +51,6 @@ class Login extends Component {
       	email: this.state.email,
       	password: this.state.password
       };
-      //console.log(userData);
       this.props.loginUser(userData); // since we handle the redirect 
     };
 

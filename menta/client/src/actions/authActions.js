@@ -8,10 +8,7 @@ import {
 } from "./types";
 // Register User
 
- //.post("/api/users/register", userData)
-//.post("/routes/api/users/register", userData)
-//.post("https://cors-anywhere.herokuapp.com/http://localhost:5000/api/users/register", userData)
-/*.then(res => history.push("/login")) */
+//.post("/api/users/register", userData)
 export const registerUser = (userData, history) => dispatch => {
   axios
     .post("http://localhost:5000/api/users/register", userData)
@@ -25,15 +22,13 @@ export const registerUser = (userData, history) => dispatch => {
 };
 // Login - get user token
 
-//.post("/routes/api/users/login", userData)
-//.post("https://cors-anywhere.herokuapp.com/http://localhost:5000/api/users/login", userData)
  //.post("/api/users/login", userData)
 export const loginUser = userData => dispatch => {
   axios
     .post("http://localhost:5000/api/users/login", userData)
     .then(res => {
       // Save to localStorage
-// Set token to localStorage
+      // Set token to localStorage
       const { token } = res.data;
       localStorage.setItem("jwtToken", token);
       // Set token to Auth header
