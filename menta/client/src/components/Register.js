@@ -62,7 +62,7 @@ class Register extends Component {
 	        				<input 
 	        				  onChange={this.onChange}
 			                  value={this.state.name}
-			                  placeholder="Enter Name"
+			                  placeholder="Enter Username"
 			                  error={errors.name}
 			                  id="name"
 			                  type="text"
